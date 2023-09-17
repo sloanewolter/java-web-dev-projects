@@ -1,4 +1,4 @@
-package org.launchcode;
+package main.java.org.launchcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,8 @@ import java.util.Arrays;
 public class Case {
     private ArrayList<Flavor> flavors = new ArrayList<>();
     private ArrayList<Cone> cones = new ArrayList<>();
+
+    private ArrayList<Toppings> toppings = new ArrayList<>();
 
     public Case(){
         Cone cone1 = new Cone("Waffle", 1.25, new ArrayList<>(Arrays.asList( "gluten")));
@@ -27,6 +29,15 @@ public class Case {
         flavors.add(flavor3);
         flavors.add(flavor4);
         flavors.add(flavor5);
+
+        Toppings toppings1 = new Toppings("nuts", 0.50, new ArrayList<>(Arrays.asList("nuts")));
+        Toppings toppings2 = new Toppings("hot fudge", 0.25, new ArrayList<>(Arrays.asList("dairy")));
+        Toppings toppings3 = new Toppings("shaved coconut", 0.25, new ArrayList<>(Arrays.asList("coconut")));
+        Toppings toppings4 = new Toppings("M&M candies", 0.50, new ArrayList<>(Arrays.asList("dairy")));
+        toppings.add(toppings1);
+        toppings.add(toppings2);
+        toppings.add(toppings3);
+        toppings.add(toppings4);
     }
 
     public ArrayList<Flavor> getFlavors() {
@@ -36,6 +47,8 @@ public class Case {
     public ArrayList<Cone> getCones() {
         return cones;
     }
+
+    public ArrayList<Toppings> getToppings() { return toppings; }
 
     public void setFlavors(ArrayList<Flavor> flavors) {
         this.flavors = flavors;

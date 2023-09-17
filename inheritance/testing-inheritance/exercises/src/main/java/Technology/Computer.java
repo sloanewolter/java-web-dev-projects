@@ -1,6 +1,6 @@
 package Technology;
 
-public class Computer {
+public class Computer extends AbstractEntity {
     private String manufacturer;
     private int serial;
     private int yearReleased;
@@ -23,7 +23,8 @@ public class Computer {
         return yearReleased;
     }
 
-    public Computer(String manufacturer, int serial, int yearReleased) {
+    public Computer(int iD, String manufacturer, int serial, int yearReleased) {
+        super(iD);
         this.manufacturer = manufacturer;
         this.serial = serial;
         this.yearReleased = yearReleased;

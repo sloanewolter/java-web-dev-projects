@@ -12,8 +12,8 @@ public class LapTop extends Computer{
         return false;
     }
 
-    public LapTop(String manufacturer, int serial, int yearReleased, double weight) {
-        super(manufacturer, serial, yearReleased);
+    public LapTop(int iD, String manufacturer, int serial, int yearReleased, double weight) {
+        super(iD, manufacturer, serial, yearReleased);
         this.weight = weight;
     }
 }

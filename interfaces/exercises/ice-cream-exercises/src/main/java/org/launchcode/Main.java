@@ -1,5 +1,5 @@
-package org.launchcode;
-
+package main.java.org.launchcode;
+import java.util.Comparator;
 import java.util.ArrayList;
 
 public class Main {
@@ -7,6 +7,15 @@ public class Main {
         Case menu = new Case();
         ArrayList<Flavor> flavors = menu.getFlavors();
         ArrayList<Cone> cones = menu.getCones();
+        ArrayList<Toppings> toppings = menu.getToppings();
+        Comparator comparator = new FlavorComparator();
+        flavors.sort(comparator);
+        Comparator comparatorCone = new ConeComparator();
+        cones.sort(comparatorCone);
+        Comparator comparatorToppings = new ToppingsComparator();
+        toppings.sort(comparatorToppings);
+        System.out.println(toppings);
+
 
         // TODO: Use a Comparator class to sort the 'flavors' array alphabetically by the 'name' field.
 
